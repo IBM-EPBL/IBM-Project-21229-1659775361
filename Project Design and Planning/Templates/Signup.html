@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/5664feb66b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    
+    <title>Inventory Managment System for Retailers</title>
+    <script>
+        function submitHandler() {
+
+            // e.preventDefault()
+
+            let name=document.getElementById("name").value
+            let emailID=document.getElementById("email").value
+            let organizationName=document.getElementById("organization").value
+            let location=document.getElementById("location").value
+            let password=document.getElementById("password").value
+            let reEnterPassword=document.getElementById("reEnterPassword").value
+
+            console.log(name)
+            console.log(emailID)
+            console.log(organizationName)
+            console.log(location)
+            console.log(password)
+            console.log(reEnterPassword)
+
+            return false
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="mt-5">
+            <div class="col-4 m-auto">
+                <div class="card card-body text-center">
+                    <h3><i class="fas fa-user-plus fa-x"></i>     Register</h3>
+                    <form onsubmit="submitHandler()" method="" action="/users">
+                        <div class="mb-3 text-start">
+                          <label for="name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" value=""><!--here undefined means empty,so if name field is not empty but certain conditions like if passwords do not match occurs then when the page is reloaded all the data in the respective fields like name,email will not get deleted instead the data will be present even when the page is reloaded-->
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="email" class="form-label ">Email ID</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email id" value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="organization" class="form-label">Organization Name</label>
+                            <input type="text" class="form-control" id="organization" name="organization" placeholder="Enter your organization name" value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="location" name="location" placeholder="Enter your location" value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="password2" class="form-label">Re-enter your password</label>
+                            <input type="password" class="form-control" id="password2" name="password2" placeholder="Re-enter your password" value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <button type="submit" class="btn btn-danger" style="width: 100%;">Register</button>
+                        </div>
+                      </form>
+                      <div class="text-start">
+                      <p class="lead">Already have an account?<a href="/users/login">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+    <!-- jquery bnecessary for bootstrap's javascript plugins -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+
+
+</body>
+</html>
