@@ -19,37 +19,47 @@
         <div class="mt-5">
             <div class="col-4 m-auto">
                 <div class="card card-body text-center">
-                    <h3><i class="fas fa-user-plus fa-x"></i>Register</h3>
-                    <form id="registerForm">
+                    <h3><i class="fas fa-user-plus fa-x"></i>Add Product</h3>
+                    <form id="addProductForm">
                         <div class="mb-3 text-start">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                            <label for="productName" class="form-label">Product Name</label>
+                            <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter product name"
                                 value="">
                         </div>
                         <div class="mb-3 text-start">
-                            <label for="email" class="form-label ">Email ID</label>
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="Enter your email id" value="">
+                            <label for="qty" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="qty" name="qty" placeholder="Enter quantity"
+                                value="">
                         </div>
                         <div class="mb-3 text-start">
-                            <label for="organization" class="form-label">Organization Name</label>
-                            <input type="text" class="form-control" id="organization" name="organization"
-                                placeholder="Enter your organization name" value="">
+                            <label for="reFillingDate" class="form-label">Next re-filling date</label>
+                            <input type="date" class="form-control" id="reFillingDate" name="reFillingDate" placeholder="Enter product name"
+                                value="">
                         </div>
                         <div class="mb-3 text-start">
-                            <label for="location" class="form-label">Location</label>
-                            <input type="text" class="form-control" id="location" name="location"
-                                placeholder="Enter your location" value="">
+                            <label for="expiryDate" class="form-label">Expiry Date</label>
+                            <input type="date" class="form-control" id="expiryDate" name="expiryDate" placeholder="Enter expiry date"
+                                value="">
                         </div>
                         <div class="mb-3 text-start">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" name="password"
-                                placeholder="Enter your password" value="">
+                            <label for="wholesalerName" class="form-label">Wholesaler's Name</label>
+                            <input type="text" class="form-control" id="wholesalerName" name="wholesalerName" placeholder="Enter wholesaler's name"
+                                value="">
                         </div>
                         <div class="mb-3 text-start">
-                            <label for="password2" class="form-label">Re-enter your password</label>
-                            <input type="password" class="form-control" id="password2" name="password2"
-                                placeholder="Re-enter your password" value="">
+                            <label for="wholesalerNumber" class="form-label">Wholesaler's Number</label>
+                            <input type="number" class="form-control" id="wholesalerNumber" name="wholesalerNumber" placeholder="Enter wholesaler's number"
+                                value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="costPrice" class="form-label">Cost Price per unit</label>
+                            <input type="number" class="form-control" id="costPrice" name="costPrice" placeholder="Enter cost price per unit"
+                                value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="sellingPrice" class="form-label">Selling Price per unit</label>
+                            <input type="number" class="form-control" id="sellingPrice" name="sellingPrice" placeholder="Enter selling price per unit"
+                                value="">
                         </div>
                         <div class="mb-3 text-start">
                             <button type="submit" class="btn btn-danger" style="width: 100%;">Register</button>
@@ -74,7 +84,7 @@
 
     <script>
 
-        document.getElementById("registerForm").addEventListener("submit", function (e) {
+        document.getElementById("addProductForm").addEventListener("submit", function (e) {
             submitHandler(e)
         })
 
