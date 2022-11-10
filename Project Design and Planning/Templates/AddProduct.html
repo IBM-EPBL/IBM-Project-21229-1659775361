@@ -92,16 +92,18 @@
 
             e.preventDefault()
 
-            let name = document.getElementById("name").value
-            let emailID = document.getElementById("email").value
-            let organizationName = document.getElementById("organization").value
-            let location = document.getElementById("location").value
-            let password = document.getElementById("password").value
-            let reEnterPassword = document.getElementById("password2").value
+            let productName = document.getElementById("productName").value
+            let qty = document.getElementById("qty").value
+            let reFillingDate = document.getElementById("reFillingDate").value
+            let expiryDate = document.getElementById("expiryDate").value
+            let wholesalerName = document.getElementById("wholesalerName").value
+            let wholesalerNumber = document.getElementById("wholesalerNumber").value
+            let costPrice = document.getElementById("costPrice").value
+            let sellingPrice = document.getElementById("sellingPrice").value
 
             //form-preProcessing
 
-            if (!name || !emailID || !organizationName || !location || !password || !reEnterPassword) {
+            if (!productName || !qty || !reFillingDate || !expiryDate || !wholesalerNumber || !wholesalerName || !costPrice || !sellingPrice) {
                 alert("Enter all the fields")
                 return
             } else if (password !== reEnterPassword) {
