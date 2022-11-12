@@ -47,7 +47,7 @@
                                 value="">
                         </div>
                         <div class="mb-3 text-start">
-                            <label for="wholesalerNumber" class="form-label">Wholesaler's Number</label>
+                            <label for="wholesalerNumber" class="form-label">Wholesaler's Phone Number</label>
                             <input type="number" class="form-control" id="wholesalerNumber" name="wholesalerNumber" placeholder="Enter wholesaler's number"
                                 value="">
                         </div>
@@ -88,6 +88,16 @@
             submitHandler(e)
         })
 
+        function isValidPhoneNumber(inputPhoneNumber) {
+            var pattern = /^\d{10}$/;
+            if (inputPhoneNumber.match(pattern)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
         function submitHandler(e) {
 
             e.preventDefault()
@@ -103,24 +113,35 @@
 
             //form-preProcessing
 
+            reFillingDate = new Date(reFillingDate)
+            expiryDate = new Date(expiryDate)
+            let currentDate = Date.now()
+
             if (!productName || !qty || !reFillingDate || !expiryDate || !wholesalerNumber || !wholesalerName || !costPrice || !sellingPrice) {
                 alert("Enter all the fields")
                 return
-            } else if (password !== reEnterPassword) {
-                alert("Passwords don't match")
+            } else if(!isValidPhoneNumber(wholesalerNumber)) {
+                alert("Enter valid phone number")
                 return
-            } else if (password.length <= 5) {
-                alert("Password should consists a minimum of 6 characters")
+            } else if(currentDate > reFillingDate) {
+                alert("Enter valid re-filling date")
+                return
+            } else if(currentDate > expiryDate) {
+                alert("Enter valid expiry date")
+                return
+            } else if(qty < 1) {
+                alert("Enter a valid quantity number")
                 return
             }
 
-            console.log(name)
-            console.log(emailID)
-            console.log(organizationName)
-            console.log(location)
-            console.log(password)
-            console.log(reEnterPassword)
-
+            console.log(productName)
+            console.log(qty)
+            console.log(reFillingDate)
+            console.log(expiryDate)
+            console.log(wholesalerNumber)
+            console.log(wholesalerName)
+            console.log(costPrice)
+            console.log(sellingPrice)
             //write backend logic here
 
 

@@ -1,0 +1,56 @@
+p{
+    margin: 0 !important;
+}
+
+.bg_gray{
+    background-color: #dfe2e5 !important;
+}
+
+.bg_blue{
+    background-color: #4579c5 !important;
+}
+
+.border_blue_color{
+    border-color: #4579c5 !important;
+}
+
+.color_default{
+    color: #18345c !important
+}
+
+.bg_white{
+    background-color: white !important;
+}
+
+.color_white{
+    color: white !important;
+}
+
+.width_75{
+    width: 75px !important;
+}
+
+.ims_btn_1{
+    color: white !important;
+    background-color: #4579c5 !important;
+    border: 2px solid #4579c5 !important;
+}
+
+.ims_btn_2{
+    color:#4579c5 !important;
+    background-color: white !important;
+    border: 2px solid #aec1dd !important; 
+}
+
+.color_black{
+    color: black !important;
+}
+
+.border_default{
+    border: 2px solid #aec1dd !important;
+}
+
+.ims_card{
+    border: 2px solid #aec1dd !important;
+    border-radius: 15px;
+}
