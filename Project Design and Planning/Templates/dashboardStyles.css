@@ -36,10 +36,24 @@ p{
     border: 2px solid #4579c5 !important;
 }
 
+.ims_btn_1_home{
+    color: white !important;
+    background-color: #4579c5 !important;
+    border: 2px solid #4579c5 !important;
+    max-width: 150px;
+}
+
 .ims_btn_2{
     color:#4579c5 !important;
     background-color: white !important;
     border: 2px solid #aec1dd !important; 
+}
+
+.ims_btn_2_home{
+    color:#4579c5 !important;
+    background-color: white !important;
+    border: 2px solid #aec1dd !important; 
+    max-width: 150px;
 }
 
 .color_black{
