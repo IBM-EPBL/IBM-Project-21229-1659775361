@@ -39,13 +39,8 @@
                     <h3>Reset Password</h3>
                     <form id="loginForm">
                         <div class="mb-3 text-start">
-                            <label for="password" class="form-label">New Password</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your new password">
-                        </div>
-                        <div class="mb-3 text-start">
-                            <label for="password2" class="form-label">Re-enter your new password</label>
-                            <input type="password" class="form-control" id="password2" name="password2"
-                                placeholder="Re-enter your new password" value="">
+                            <label for="email" class="form-label">Email-ID</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your new email-id">
                         </div>
                         <div class="mb-3 text-start">
                             <button type="submit" class="btn ims_btn_1" style="width: 100%;">Submit</button>
@@ -76,21 +71,16 @@
 
             e.preventDefault()
 
-            let password = document.getElementById("password").value
-            let reEnterPassword = document.getElementById("password2").value
+            let email = document.getElementById("email").value
 
             //form-preProcessing
 
-            if (password !== reEnterPassword) {
-                alert("Passwords don't match")
-                return
-            } else if (password.length <= 5) {
-                alert("Password should consists a minimum of 6 characters")
+            if (!email) {
+                alert("Enter your email-id")
                 return
             }
 
-            console.log(password)
-            console.log(reEnterPassword)
+            console.log(email)
 
             //write backend logic here
 

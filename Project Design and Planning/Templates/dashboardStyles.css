@@ -15,7 +15,7 @@ p{
 }
 
 .color_default{
-    color: #18345c !important
+    color: #134081 !important
 }
 
 .bg_white{
@@ -67,4 +67,23 @@ p{
 .ims_card{
     border: 2px solid #aec1dd !important;
     border-radius: 15px;
+}
+
+.no-link{
+    font-weight: bold;
+    color: #134081 !important;
+}
+
+.custom-nav{
+    font-size: large !important;
+    width: 80px !important;
+    color: white !important;
+    padding-bottom: 0px !important;
+}
+
+.custom-nav2{
+  font-size: large !important;
+    width: 120px !important;
+    color: white !important;
+    padding-bottom: 0px !important;
 }
