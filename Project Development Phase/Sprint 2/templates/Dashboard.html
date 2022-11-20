@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/5664feb66b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Inventory Managment System for Retailers</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/dashboardStyles.css') }}">
+    <style>  
+      
+        </style>
+</head>
+
+<body class="bg_gray color_default">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light rounded sticky-top mb-3 bg_blue ms-5 me-5">
+            <div class="container-fluid" style="display:block">
+                <a class="navbar-brand" href="/" style="color:white;font-size:XX-Large"><img src="{{ url_for('static',filename='/ibm - ims logo2.jpg') }}" height="30px" width="30px" class='pb-1' alt="Company Logo"/> Affins Inventory Management System</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav" href="/addproduct" style="min-width: 70px;">Add Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav" href="/signin" style="min-width: 90px;">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div style="margin-left: 50px;">
+        <div class="row mt-6">
+        {% for row in data %}   
+            <div class="col-3">
+                <div class="bg_white ims_card p-3 mb-2">
+                    <div class="row align-items-center mb-2">
+                        <div class="col-6">
+                            <h4>{{data[row]["NAME"]}}</h4>
+                        </div>
+                        <div class="col-6">
+                            <h5>Qty: {{data[row]["STOCK"]}}</h5>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                            <p>Exp Date: {{data[row]["EXPIRYDATE"]}}</p>
+                    </div>
+                    <div class="row mb-2">
+                            <p>Bought @ ₹{{data[row]["COSTPRICE"]}}</p>
+                        </div>
+                        <div class="row mb-2">
+                            <p>Sold @ ₹{{data[row]["SELLINGPRICE"]}}</p>
+                        </div>
+                   <a href="/editproduct?'id'={{data[row]['PRODUCTID']}}"><button type="button" class="btn ims_btn_1 width_75">Edit</button></a>
+                   <a href="/deleteproduct?'id'={{data[row]['PRODUCTID']}}"><button type="button" class="btn ims_btn_2 width_75">Delete</button></a>
+                </div>
+            </div>  
+           
+            
+    {% endfor %}</div></div>
+    {% if not data %}
+  <div style="margin-left: 300px; margin-top: 200px; margin-right: 280px;"> <p>Don't worry we have got you!!! Get an all-in-one inventory management system here... Use our product and make your things easier.</p></div>
+    {% endif %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+
+    <!-- jquery bnecessary for bootstrap's javascript plugins -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+
+</body>
+
+</html>
