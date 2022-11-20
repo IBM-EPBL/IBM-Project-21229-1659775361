@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/5664feb66b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/dashboardStyles.css') }}">
+
+    <title>Inventory Managment System for Retailers</title>
+
+</head>
+
+<body class="bg_gray color_default">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light rounded sticky-top mb-3 bg_blue ms-5 me-5">
+            <div class="container-fluid" style="display:block">
+                <a class="navbar-brand" href="/" style="color:white;font-size:XX-Large"><img src="{{ url_for('static',filename='/ibm - ims logo2.jpg') }}" height="30px" width="30px" class='pb-1' alt="Company Logo"/> Affins Inventory Management System</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav" href="signup" style="min-width: 85px;">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="mt-5 mb-5">
+            <div class="col-4 m-auto">
+                <div class="card card-body text-center">
+                    <h3>Register</h3>
+                    <form  action="http://127.0.0.1:5000/signup" method="post">
+                        <div class="mb-3 text-start">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                                value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="email" class="form-label ">Email ID</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email id" value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="organization" class="form-label">Organization Name</label>
+                            <input type="text" class="form-control" id="organization" name="organization"
+                                placeholder="Enter your organization name" value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="location" name="location"
+                                placeholder="Enter your location" value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                placeholder="Enter your password" value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="password2" class="form-label">Re-enter your password</label>
+                            <input type="password" class="form-control" id="password2" name="password2"
+                                placeholder="Re-enter your password" value="">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <button type="submit" class="btn ims_btn_1" style="width: 100%;">Register</button>
+                        </div>
+                    </form>
+                    <div class="text-start">
+                        <p class="">Already have an account?<a class="no-link" href="/signin">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='pb-3 pt-3 text-center'>
+            Copyright &copy; Affins
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+
+    <!-- jquery bnecessary for bootstrap's javascript plugins -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+
+    <script>
+
+        document.getElementById("registerForm").addEventListener("submit", function (e) {
+            submitHandler(e)
+        })
+
+        function submitHandler(e) {
+
+            e.preventDefault()
+
+            let name = document.getElementById("name").value
+            let emailID = document.getElementById("email").value
+            let organizationName = document.getElementById("organization").value
+            let location = document.getElementById("location").value
+            let password = document.getElementById("password").value
+            let reEnterPassword = document.getElementById("password2").value
+
+            //form-preProcessing
+
+            if (!name || !emailID || !organizationName || !location || !password || !reEnterPassword) {
+                alert("Enter all the fields")
+                return
+            } else if (password !== reEnterPassword) {
+                alert("Passwords don't match")
+                return
+            } else if (password.length <= 5) {
+                alert("Password should consists a minimum of 6 characters")
+                return
+            }
+
+            console.log(name)
+            console.log(emailID)
+            console.log(organizationName)
+            console.log(location)
+            console.log(password)
+            console.log(reEnterPassword)
+
+            //write backend logic here
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>
