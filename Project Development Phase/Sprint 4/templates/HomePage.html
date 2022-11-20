@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/5664feb66b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Inventory Managment System for Retailers</title>
+    <link href="{{ url_for('static',filename='/dashboardStyles.css') }}" rel ="stylesheet">
+
+</head>
+
+<body class="bg_gray color_default mb-5">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light rounded sticky-top mb-3 bg_blue ms-5 me-5">
+            <div class="container-fluid" style="display:block">
+                <a class="navbar-brand" href="/" style="color:white;font-size:XX-Large"><img src="{{ url_for('static',filename='/ibm - ims logo2.jpg') }}" height="30px" width="30px" class='pb-1' alt="Company Logo"/> Affins Inventory Management System</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav" href="/signin" style="min-width: 85px;">Sign In</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav" href="/signup" style="min-width: 85px;">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="m-5">
+            <div>
+                <img src="{{ url_for('static',filename='/ibm - inventory management.jpg') }}" height="400px" width="100%" alt="Inventory Management System"></img>
+            </div>
+            <div class='pb-3 pt-3 text-center'>
+                <h1>Services</h1>
+                <hr ></hr>
+            </div>
+            <div class='row pt-3 pb-3' >
+                <div class='col'>
+                    <div class="card text-center rounded border_default">
+                        <div class="card-body">
+                            <h5 class="card-title">Maintain your product details</h5>
+                            <p class="card-text">Inventory management facilitates the smooth functioning of your business and enhances sales, promotes cost-effectiveness, and improves customer experience. It helps businesses understand which products are more valuable in sales and earning profits. It provides a complete detailing of the inventory and its location. It eases the process of managing more than one shop/store or warehouse.</p>
+                            <a href="/" class="btn ims_btn_1 mt-3">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class="card text-center rounded border_default">
+                        <div class="card-body">
+                            <h5 class="card-title">Get daily alerts and many more...</h5>
+                            <p class="card-text">Are you worried that you could not keep track of the quantity of stock? Or are you worried that you could not know the profits of each stock? or could you not keep track of the wholesaler's details? Or do you feel that maintaining your inventory is itself a big headache? Don't worry we have got you!!! Get an all-in-one inventory management system here... Use our product and make your things easier.</p>
+                            <a href="/" class="btn ims_btn_1 mt-3">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='pb-3 pt-3 text-center'>
+                <h1>About Us</h1>
+                <hr></hr>
+            </div>
+            <div class='row pb-3 pt-3'>
+                <div class='col'>
+                    <img src="{{ url_for('static',filename='/ibm - ims logo2.jpg') }}" height="100%" width="100%" alt="Company information" />
+                </div>
+                <div class='col text-center align-self-center'>
+                    <h2 class='pb-3 pt-3'>Affins Inventory management system</h2>
+                    <p style="align-self:center;">Affins was Inaugurated on 25th December 2021. Affins focuses on providing the customers with an all-in-one inventory management system so that the life of the retailers can become much more easier and they can concentrate more on how to expand their businees rather than worrying about maintaing a list of items in the inventory or keeping track of quantity of each stocks or storing all the information about the wholesalers, etc. Considering the national roll out, Affins has been developed with modular and scalable approach with configurable rule based architecture allowing customization to easily incorporate specific requirements from nationwide stakeholders.</p>
+                </div>
+            </div>
+        </div>
+        <div class='pb-3 pt-3 text-center'>
+            Copyright &copy; Affins
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+
+    <!-- jquery bnecessary for bootstrap's javascript plugins -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+
+</body>
+
+</html>
